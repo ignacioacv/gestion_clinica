@@ -7,19 +7,6 @@ id="layout-navbar">
     </div>
 
     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-        <!-- Search -->
-        <div class="navbar-nav align-items-center">
-        <div class="nav-item d-flex align-items-center">
-            <i class="bx bx-search fs-4 lh-0"></i>
-            <input
-            type="text"
-            class="form-control border-0 shadow-none ps-1 ps-sm-2"
-            placeholder="Search..."
-            aria-label="Search..." />
-        </div>
-        </div>
-        <!-- /Search -->
-
         <ul class="navbar-nav flex-row align-items-center ms-auto">
         <!-- User -->
         <li class="nav-item navbar-dropdown dropdown-user dropdown">
@@ -38,8 +25,8 @@ id="layout-navbar">
                     </div>
                     </div>
                     <div class="flex-grow-1">
-                    <span class="fw-medium d-block">@php echo session('admin') @endphp</span>
-                    <small class="text-muted">Admin</small>
+                    <span class="fw-medium d-block"></span>
+                    <small class="text-muted">Usuario</small>
                     </div>
                 </div>
                 </a>
@@ -50,14 +37,14 @@ id="layout-navbar">
             <li>
                 <a class="dropdown-item" href="#">
                 <i class="bx bx-user me-2"></i>
-                <span class="align-middle">My Profile</span>
+                <span class="align-middle">Mi perfil</span>
                 </a>
             </li>
             <li>
                 <div class="dropdown-divider"></div>
             </li>
             <li>
-                <form action="{{route('cerrar_sesion')}}" method="POST">
+                <form action="" method="POST">
                     @method('GET')
                     <button class="btn btn-danger"><i class='bx bx-user-x'></i>Cerrar Sesion</button>
                 </form>
