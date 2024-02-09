@@ -26,7 +26,7 @@ id="layout-navbar">
                     </div>
                     <div class="flex-grow-1">
                     <span class="fw-medium d-block"></span>
-                    <small class="text-muted">Usuario</small>
+                    <small class="text-muted">@php echo session('admin') @endphp</small>
                     </div>
                 </div>
                 </a>
@@ -44,7 +44,7 @@ id="layout-navbar">
                 <div class="dropdown-divider"></div>
             </li>
             <li>
-                <form action="" method="POST">
+                <form action="{{route('cerrar_sesion')}}" method="POST">
                     @method('GET')
                     <button class="btn btn-danger"><i class='bx bx-user-x'></i>Cerrar Sesion</button>
                 </form>

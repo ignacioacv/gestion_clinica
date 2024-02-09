@@ -15,13 +15,13 @@ return new class extends Migration
             $table->id();
             $table->date('apoiment_date');
             
-            $table->unsignedBigInteger('doctor_id',50);
+            $table->unsignedBigInteger('doctor_id');
             $table->foreign('doctor_id')->references('id')->on('doctors');
             
-            $table->unsignedBigInteger('patient_id',50);
+            $table->unsignedBigInteger('patient_id');
             $table->foreign('patient_id')->references('id')->on('patients');
 
-            $table->unsignedBigInteger('nursing_saff_id',50);
+            $table->unsignedBigInteger('nursing_saff_id');
             $table->foreign('nursing_saff_id')->references('id')->on('nursing_staff'); 
 
             $table->text('description', 250);

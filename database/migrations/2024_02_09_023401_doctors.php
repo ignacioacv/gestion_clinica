@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('surname',100);
             $table->string('email',50);
             $table->integer('phone_number');
-            $table->unsignedBigInteger('doctor_state',50);
+            $table->unsignedBigInteger('doctor_state');
             $table->foreign('doctor_state')->references('id')->on('states');
             $table->string('password',100);
             $table->timestamps();

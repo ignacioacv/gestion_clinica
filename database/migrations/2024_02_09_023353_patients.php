@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('surname',100);
             $table->string('email',50);
             $table->integer('phone_number');
-            $table->string('user_type',50);
-            $table->foreign('user_type')->references('id')->on('user_type');
             $table->string('password',100);
             $table->timestamps();
         });

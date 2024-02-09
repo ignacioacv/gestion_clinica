@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('reports', function (Blueprint $table){
             $table->id();
-            $table->date_time_set('report_date');
+            $table->timestamps();
             $table->unsignedBigInteger('medicar_consultation_id');
             $table->foreign('medicar_consultation_id')->references('id')->on('medical_consultations');
         });
