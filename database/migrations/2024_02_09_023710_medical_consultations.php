@@ -19,8 +19,7 @@ return new class extends Migration
             
             $table->date('medical_consultation_date');
             $table->text('description', 250);
-            $table->date_time_set('start_date');
-            $table->date_time_set('end_date');
+            $table->timestamps();
         });
     }
 

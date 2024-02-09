@@ -28,54 +28,36 @@
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx bxs-book-content"></i>
-            <div data-i18n="Layouts">Doctores</div>
+            <div data-i18n="Layouts">Citas</div>
             </a>
 
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="{{url('/cursos_activos')}}" class="menu-link">
-                    <div data-i18n="Without menu">Doctores Activos</div>
+                    <a href="" class="menu-link">
+                    <div data-i18n="Without menu">Ver citas</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">Doctores Inactivos</div>
+                    <a href="" class="menu-link">
+                    <div data-i18n="Without navbar">Calendario de citas</div>
                     </a>
                 </li>
             </ul>
         </li>
-
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-user-circle"></i>
-                <div data-i18n="Dashboards">Enfermeras</div>
-            </a>
-        </li>
-
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-user-circle"></i>
-                <div data-i18n="Dashboards">Pacientes</div>
-            </a>
-        </li>
-
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bxs-file-pdf"></i>
-            <div data-i18n="Layouts">Reportes</div>
+            <i class="menu-icon tf-icons bx bxs-book-content"></i>
+            <div data-i18n="Layouts">Consultas</div>
             </a>
 
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="{{url('/cursos_categoria')}}" class="menu-link">
-                    <div data-i18n="Without menu">Cursos</div>
+                    <a href="" class="menu-link">
+                    <div data-i18n="Without menu">Ver consultas</div>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">Instructores</div>
-                    </a>
-                </li>
+                
             </ul>
         </li>
+    </ul>
 </aside>

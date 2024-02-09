@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('surname',100);
             $table->integer('phone_number');
             $table->string('email',50);
+            $table->string('password',100);
             $table->string('designated_area',50);
             $table->timestamps();
         });
