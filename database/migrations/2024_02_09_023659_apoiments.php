@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('apoiments', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('apoiment_date');
+            $table->string('apoiment_date');
 
             $table->unsignedBigInteger('doctor_id');
             $table->foreign('doctor_id')->references('id')->on('doctors');
@@ -27,6 +27,7 @@ return new class extends Migration
             $table->text('description', 250);
             $table->boolean('completed');
             $table->string('apoiment_hour');
+
             $table->timestamps();
         });
     }

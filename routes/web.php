@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ApoimentsController;
+use App\Http\Controllers\MedicalConsultationController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -15,3 +16,12 @@ Route::get('/cerrar_sesion',[LoginController::class, 'cerrarSesion'])->name('cer
 
 //Apoiments
 Route::get('/apoiments', [ApoimentsController::class, 'index'])->name('apoiments_list');
+Route::put('/edit_apoiment/{id}', [ApoimentsController::class, 'update'])->name('update_apoiment');
+Route::get('/add_apoiment_form', [ApoimentsController::class, 'getAllPersons']);
+Route::post('/saveApoiment', [ApoimentsController::class, 'store'])->name('save_apoiment');
+
+//MedicalConsultations
+Route::get('/medical_consultations', [MedicalConsultationController::class, 'index'])->name('medical_consultation_list');
+Route::post('/add_medical_form/{id}', [MedicalConsultationController::class, 'getApoimentDisease'])->name('form_medical');
+Route::post('/save_medical_consultation', [MedicalConsultationController::class, 'store'])->name('save_medical');
+Route::put('/edit_medical_consultation/{id}', [MedicalConsultationController::class , 'update'])->name('update_medical');
