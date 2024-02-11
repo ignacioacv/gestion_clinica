@@ -13,12 +13,16 @@ return new class extends Migration
     {
         Schema::create('medical_consultations', function (Blueprint $table){
             $table->id();
-            
+
             $table->unsignedBigInteger('apoiment_id');
-            $table->foreign('apoiment_id')->references('id')->on('apoiments'); 
-            
-            $table->date('medical_consultation_date');
+            $table->foreign('apoiment_id')->references('id')->on('apoiments');
+
+            $table->dateTime('medical_consultation_date');
             $table->text('description', 250);
+
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
+
             $table->timestamps();
         });
     }

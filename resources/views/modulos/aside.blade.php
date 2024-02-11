@@ -62,13 +62,13 @@
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx bxs-file-pdf"></i>
-            <div data-i18n="Layouts">Reportes</div>
+            <div data-i18n="Layouts">Citas medicas</div>
             </a>
 
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="{{url('/cursos_categoria')}}" class="menu-link">
-                    <div data-i18n="Without menu">Cursos</div>
+                    <a href="{{url('/apoiments')}}" class="menu-link">
+                    <div data-i18n="Without menu">Listado de citas</div>
                     </a>
                 </li>
                 <li class="menu-item">
