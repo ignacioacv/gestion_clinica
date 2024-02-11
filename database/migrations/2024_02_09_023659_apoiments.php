@@ -13,22 +13,22 @@ return new class extends Migration
     {
         Schema::create('apoiments', function (Blueprint $table) {
             $table->id();
-            $table->date('apoiment_date');
-            
+            $table->string('apoiment_date');
+
             $table->unsignedBigInteger('doctor_id');
             $table->foreign('doctor_id')->references('id')->on('doctors');
-            
+
             $table->unsignedBigInteger('patient_id');
             $table->foreign('patient_id')->references('id')->on('patients');
 
             $table->unsignedBigInteger('nursing_saff_id');
-            $table->foreign('nursing_saff_id')->references('id')->on('nursing_staff'); 
+            $table->foreign('nursing_saff_id')->references('id')->on('nursing_staff');
 
             $table->text('description', 250);
             $table->boolean('completed');
-            $table->time('apoiment_hour');
+            $table->string('apoiment_hour');
 
-
+            $table->timestamps();
         });
     }
 

@@ -19,7 +19,7 @@
         <!-- Dashboards -->
         <li class="menu-item">
             <a href="{{url('/')}}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <i class="menu-icon tf-icons bx bxs-home-circle"></i>
                 <div data-i18n="Dashboards">Inicio</div>
             </a>
         </li>
@@ -27,7 +27,7 @@
         <!-- Layouts -->
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bxs-book-content"></i>
+            <i class="menu-icon tf-icons bx bxs-group"></i>
             <div data-i18n="Layouts">Doctores</div>
             </a>
 
@@ -47,35 +47,86 @@
 
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-user-circle"></i>
+                <i class="menu-icon tf-icons bx bxs-group"></i>
                 <div data-i18n="Dashboards">Enfermeras</div>
             </a>
         </li>
 
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-user-circle"></i>
+                <i class="menu-icon tf-icons bx bxs-group"></i>
                 <div data-i18n="Dashboards">Pacientes</div>
             </a>
         </li>
 
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bxs-file-pdf"></i>
+            <i class="menu-icon tf-icons bx bxs-calendar-edit"></i>
+            <div data-i18n="Layouts">Citas medicas</div>
+            </a>
+
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="{{url('/apoiments')}}" class="menu-link">
+                    <div data-i18n="Without menu">Listado de citas</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="{{ url('/add_apoiment_form')}}" class="menu-link">
+                    <div data-i18n="Without navbar">Crear cita</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <i class="menu-icon tf-icons bx bxs-cabinet"></i>
+            <div data-i18n="Layouts">Consultas realizadas</div>
+            </a>
+
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="{{url('/medical_consultations')}}" class="menu-link">
+                    <div data-i18n="Without menu">Listado de consultas</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <i class="menu-icon tf-icons bx bxs-server"></i>
             <div data-i18n="Layouts">Reportes</div>
             </a>
 
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="{{url('/cursos_categoria')}}" class="menu-link">
-                    <div data-i18n="Without menu">Cursos</div>
+                    <a href="{{url('/apoiments')}}" class="menu-link">
+                    <div data-i18n="Without menu">Doctores</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">Instructores</div>
+                    <div data-i18n="Without navbar">Pacientes</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <div data-i18n="Without navbar">Enfermeras</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <div data-i18n="Without navbar">Citas</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <div data-i18n="Without navbar">Consultas</div>
                     </a>
                 </li>
             </ul>
         </li>
+
 </aside>
