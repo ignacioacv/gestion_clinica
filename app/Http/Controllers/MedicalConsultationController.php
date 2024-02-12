@@ -50,9 +50,16 @@ class MedicalConsultationController extends Controller
         $medical_cons->start_date = $request->post('start_date');
         $medical_cons->end_date = $request->post('end_date');
 
-        Session::flash('message', 'El registro se agrego correctamente');
-        $medical_cons->save();
-        return redirect()->route('medical_consultation_list');
+        $if_id_exits = MedicalConsultations::where('apoiment_id', '=', $request->post('apoiment_id'))->get();
+
+        if(count($if_id_exits) > 0){
+            Session::flash('message', 'La cita que intentas ingresar ya esta registrada como consulta en la base de datos. Intenta con un registro diferente.');
+            return redirect()->route('medical_consultation_list');
+        }else{
+            Session::flash('message', 'El registro se agrego correctamente');
+            $medical_cons->save();
+            return redirect()->route('medical_consultation_list');
+        }
     }
 
     public function update(Request $request, $id){
