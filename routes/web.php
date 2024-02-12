@@ -3,6 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ApoimentsController;
 use App\Http\Controllers\MedicalConsultationController;
+use App\Http\Controllers\CalendarController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -25,3 +26,6 @@ Route::get('/medical_consultations', [MedicalConsultationController::class, 'ind
 Route::post('/add_medical_form/{id}', [MedicalConsultationController::class, 'getApoimentDisease'])->name('form_medical');
 Route::post('/save_medical_consultation', [MedicalConsultationController::class, 'store'])->name('save_medical');
 Route::put('/edit_medical_consultation/{id}', [MedicalConsultationController::class , 'update'])->name('update_medical');
+
+//Calendar
+Route::get('/calendar_view', [CalendarController::class, 'index']);

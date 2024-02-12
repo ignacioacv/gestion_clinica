@@ -54,4 +54,5 @@
 <script src="{{ url('/') }}/assets/js/main.js"></script>
 <script src="{{ url('/') }}/assets/js/dashboards-analytics.js"></script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+@stack('scripts')
 </html>

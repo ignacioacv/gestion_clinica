@@ -91,6 +91,11 @@
                     <div data-i18n="Without menu">Listado de consultas</div>
                     </a>
                 </li>
+                <li class="menu-item">
+                    <a href="{{url('/calendar_view')}}" class="menu-link">
+                    <div data-i18n="Without menu">Calendario de consultas</div>
+                    </a>
+                </li>
             </ul>
         </li>
 
