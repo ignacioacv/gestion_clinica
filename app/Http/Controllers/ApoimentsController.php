@@ -72,4 +72,11 @@ class ApoimentsController extends Controller
             return redirect()->route('apoiments_list');
         }
     }
+
+    //Delete 
+    public function destroy($id) {
+        $patient = Apoiments::find($id);
+        $patient->delete();
+        return back();
+  }
 }

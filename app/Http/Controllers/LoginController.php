@@ -28,7 +28,7 @@ class LoginController extends Controller
                 session(['id_admin' => $admin->id]); 
                 session(['admin' => $admin->nombre]); 
                 //mandar para la vista template_admin
-                return view('template_admin');
+                return view('home');
             }
         } elseif (count($doctor) > 0) {
             foreach($doctor as $doctor){

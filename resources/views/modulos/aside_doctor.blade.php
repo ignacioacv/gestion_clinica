@@ -27,35 +27,43 @@
         <!-- Layouts -->
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bxs-book-content"></i>
-            <div data-i18n="Layouts">Citas</div>
+            <i class="menu-icon tf-icons bx bxs-calendar-edit"></i>
+            <div data-i18n="Layouts">Citas medicas</div>
             </a>
 
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="" class="menu-link">
-                    <div data-i18n="Without menu">Ver citas</div>
+                    <a href="{{url('/apoiments')}}" class="menu-link">
+                    <div data-i18n="Without menu">Listado de citas</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="" class="menu-link">
-                    <div data-i18n="Without navbar">Calendario de citas</div>
+                    <a href="{{ url('/add_apoiment_form')}}" class="menu-link">
+                    <div data-i18n="Without navbar">Crear cita</div>
                     </a>
                 </li>
             </ul>
         </li>
+
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bxs-book-content"></i>
-            <div data-i18n="Layouts">Consultas</div>
+            <i class="menu-icon tf-icons bx bxs-cabinet"></i>
+            <div data-i18n="Layouts">Consultas realizadas</div>
             </a>
 
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="" class="menu-link">
-                    <div data-i18n="Without menu">Ver consultas</div>
+                    <a href="{{url('/medical_consultations')}}" class="menu-link">
+                    <div data-i18n="Without menu">Listado de consultas</div>
                     </a>
                 </li>
+                <li class="menu-item">
+                    <a href="{{url('/calendar_view')}}" class="menu-link">
+                    <div data-i18n="Without menu">Calendario de consultas</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
                 
             </ul>
         </li>
