@@ -5,6 +5,8 @@ use App\Http\Controllers\ApoimentsController;
 use App\Http\Controllers\MedicalConsultationController;
 use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\PatientController;
+use App\Models\Patients;
 use Illuminate\Support\Facades\Route;
 
 
@@ -42,3 +44,10 @@ Route::delete('/delete_doctor/{id}', [DoctorController::class, 'destroy'])->name
 //Doctores inactivos
 Route::get('/doctors_inactivos', [DoctorController::class, 'index2'])->name('doctors_list2');
 Route::put('/activar_doctor/{id}', [DoctorController::class, 'cambiar_state'])->name('activar_doctor');
+
+//Patient
+Route::get('/patient', [PatientController::class, 'index'])->name('patient_list');
+Route::get('/add_patient', [PatientController::class, 'create']);
+Route::put('/edit_patient/{id}', [PatientController::class, 'update'])->name('update_patient');
+Route::post('/savePatient', [PatientController::class, 'store'])->name('save_patient');
+Route::delete('/delete_patient/{id}', [PatientController::class, 'destroy'])->name('delete_patient');

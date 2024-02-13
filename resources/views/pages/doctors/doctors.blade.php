@@ -59,7 +59,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-info" data-bs-dismiss="modal">Cancelar</button>
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#borrarFiledata{{ $doctorItem->id }}" 
-                id="confirmarBorrar" onclick="event.preventDefault(); document.getElementById('borrarFiledata{{ $doctorItem->id }}').submit();">Borrar</button>
+                onclick="event.preventDefault(); document.getElementById('borrarFiledata{{ $doctorItem->id }}').submit();">Borrar</button>
           </div>
       </div>
   </div>
@@ -101,9 +101,6 @@
           </div>
         </div>
       </div>
-
-
-
       @endforeach
     </tbody>
   </table>
