@@ -26,7 +26,7 @@ id="layout-navbar">
                     </div>
                     <div class="flex-grow-1">
                     <span class="fw-medium d-block"></span>
-                    <small class="text-muted">@php echo session('admin') @endphp</small>
+                    <small class="text-muted">Usuario</small>
                     </div>
                 </div>
                 </a>

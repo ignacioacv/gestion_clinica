@@ -18,7 +18,7 @@
     <ul class="menu-inner py-1">
         <!-- Dashboards -->
         <li class="menu-item">
-            <a href="{{url('/')}}" class="menu-link">
+            <a href="{{url('/home')}}" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-home-circle"></i>
                 <div data-i18n="Dashboards">Inicio</div>
             </a>
@@ -46,7 +46,7 @@
         </li>
 
         <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link">
+            <a href="{{url('/nurse')}}" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-group"></i>
                 <div data-i18n="Dashboards">Enfermeras</div>
             </a>
@@ -107,17 +107,17 @@
 
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="{{url('/apoiments')}}" class="menu-link">
+                    <a href="{{url('/r_doctor')}}" class="menu-link" target="_blank">
                     <div data-i18n="Without menu">Doctores</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <a href="{{url('/r_patient')}}" class="menu-link" target="_blank">
                     <div data-i18n="Without navbar">Pacientes</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <a href="{{url('/r_nurse')}}" class="menu-link" target="_blank">
                     <div data-i18n="Without navbar">Enfermeras</div>
                     </a>
                 </li>

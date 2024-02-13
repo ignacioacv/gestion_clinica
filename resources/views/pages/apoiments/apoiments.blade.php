@@ -27,6 +27,7 @@
         <th>Completada</th>
         <th>Hora de la cita</th>
         <th>Acciones</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -46,7 +47,32 @@
               <button type="submit" class="btn btn-success">Registrar consulta</button>
             </form>
           </td>
+          <td>
+            <form id="borrarFiledata{{ $apoimentItem->id }}" action="{{ route('delete_apoiment', $apoimentItem->id) }}" method="POST">
+              @csrf 
+              @method('delete')
+          </form><button type="button" class="btn btn-success bx bxs-trash" data-bs-toggle="modal" data-bs-target="#ModalDelete{{ $apoimentItem->id }}"></button>
+          </td>
         </tr>
+        <!-- Modal Delete-->
+        <div class="modal fade" id="ModalDelete{{ $apoimentItem->id }}" tabindex="-1" aria-labelledby="borrarBaseLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header bg-gradient-danger ">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar consulta: {{ $apoimentItem->apoiment_date. ' '.$apoimentItem->patient_name }} </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-left">
+                <label for="">¿Dese eliminar este registro?</label>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#borrarFiledata{{ $apoimentItem->id }}" 
+                onclick="event.preventDefault(); document.getElementById('borrarFiledata{{ $apoimentItem->id }}').submit();">Borrar</button>
+          </div>
+      </div>
+  </div>
+</div>
 
       <!--Modal-->
       <div class="modal fade" id="ModalCita{{ $apoimentItem->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
