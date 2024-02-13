@@ -33,13 +33,13 @@
 
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="{{url('/cursos_activos')}}" class="menu-link">
+                    <a href="{{url('/doctors')}}" class="menu-link">
                     <div data-i18n="Without menu">Doctores Activos</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">Doctores Inactivos</div>
+                    <a href="{{url('/doctors_inactivos')}}" class="menu-link">
+                    <div data-i18n="Without menu">Doctores Inactivos</div>
                     </a>
                 </li>
             </ul>
