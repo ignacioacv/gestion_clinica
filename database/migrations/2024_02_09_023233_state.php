@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('states', function (Blueprint $table) {
-            $table->id(); 
-            $table->string('state',100);
+            $table->id();
+            $table->string('state', 100);
 
             $table->timestamps();
         });
@@ -25,6 +25,5 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('states');
-
     }
 };

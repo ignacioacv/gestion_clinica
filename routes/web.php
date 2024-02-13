@@ -4,6 +4,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ApoimentsController;
 use App\Http\Controllers\MedicalConsultationController;
 use App\Http\Controllers\CalendarController;
+use App\Http\Controllers\DoctorController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -29,3 +30,15 @@ Route::put('/edit_medical_consultation/{id}', [MedicalConsultationController::cl
 
 //Calendar
 Route::get('/calendar_view', [CalendarController::class, 'index']);
+
+//Doctors
+Route::get('/doctors', [DoctorController::class, 'index'])->name('doctors_list');
+Route::put('/desactivar_doctor/{id}', [DoctorController::class, 'cambiar_estado'])->name('desactivar_doctor');
+Route::put('/edit_doctor/{id}', [DoctorController::class, 'update'])->name('update_doctor');
+Route::get('/add_doctor_form', [DoctorController::class, 'getAllPersons']);
+Route::post('/saveDoctor', [DoctorController::class, 'store'])->name('save_doctor');
+Route::delete('/delete_doctor/{id}', [DoctorController::class, 'destroy'])->name('delete_doctor');
+
+//Doctores inactivos
+Route::get('/doctors_inactivos', [DoctorController::class, 'index2'])->name('doctors_list2');
+Route::put('/activar_doctor/{id}', [DoctorController::class, 'cambiar_state'])->name('activar_doctor');
